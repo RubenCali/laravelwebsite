@@ -14,7 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
-Route::get('/hello-world', 'TestController@helloWorld');
-Route::get('/over-mij', 'AboutController@aboutMe');
+Route::get('/blog-detail', 'BlogDetailController@blogDetail')->name('blogDetail');
+Route::get('/login', 'LoginController@login')->name('login');
+Route::get('/registreer', 'RegistreerController@registreer')->name('registreer');
+Route::get('/blog-posten', 'BlogPostenController@blogPosten')->name('blogPosten');
+Route::get('/contact', 'ContactController@contact')->name('contact');
+Route::post('/contact', 'ContactController@handleForm')->name('contact.handle');
+
+
+
+
+// Route::group(['prefix' => 'studenten'], function(){
+//     Route::get('ruben', function(){
+//         return 'Ruben';
+//     });
+//     Route::get('joey', function(){
+//         return 'joey';
+//     });
+//     Route::get('mees', function(){
+//         return 'mees';
+//     });
+
+// });
