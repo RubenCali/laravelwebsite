@@ -17,8 +17,6 @@ Route::get('/', function () {
     return view('homepage');
 });
 Route::get('/blog-detail', 'BlogDetailController@blogDetail')->name('blogDetail');
-Route::get('/login', 'LoginController@login')->name('login');
-Route::get('/registreer', 'RegistreerController@registreer')->name('registreer');
 Route::get('/blog-posten', 'BlogPostenController@blogPosten')->name('blogPosten');
 Route::get('/contact', 'ContactController@contact')->name('contact');
 Route::post('/contact', 'ContactController@handleForm')->name('contact.handle');
@@ -38,3 +36,6 @@ Route::post('/contact', 'ContactController@handleForm')->name('contact.handle');
 //     });
 
 // });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
