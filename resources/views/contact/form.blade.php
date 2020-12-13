@@ -10,4 +10,4 @@
 <button type="submit">verstuur</button>
 
 </form>
-@endsection('content')
+@endsection()

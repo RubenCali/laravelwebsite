@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOG WEBSITE</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo asset('css/app.css')?>">
+    <link rel="stylesheet" href="<?php echo asset('css/style.css')?>">
+    <style>
+        @font-face {
+  font-family: Syncopate;
+  src: url(<?php echo asset('fonts/Syncopate-Bold.ttf') ?>);
+}
+
+    </style>
 </head>
 <body>
     <section>
@@ -13,44 +20,32 @@
             <div class="row">
 
          
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">RUBEN CALI</a>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="<?php echo route('homepage') ?>">RUBEN CALI</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link {{ Route::currentRouteName() == "homepage" ? 'active' : '' }}" href="<?php echo route('homepage') ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Portfolio</a>
+                  <a class="nav-link" href="http://rubencali.nl/" target="_blank">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Over mij</a>
+                  <a class="nav-link {{ Route::currentRouteName() == "blogPosten" ? 'active' : '' }}" href="<?php echo route('blogPosten') ?>">Blog posten</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Catogoriën
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </li>
+              
+                <div class="user">
+                    <li class="nav-item">
+                        <a class="nav-link  registerBTN {{ Route::currentRouteName() == "register" ? 'registerBTNClicked' : '' }}" href="<?php echo route('register') ?>">REGISTREER</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link inlogBTN {{ Route::currentRouteName() == "login" ? 'active' : '' }}" href="<?php echo route('login') ?>"><i class="far fa-user"></i> Login</a>
+                      </li>
+                </div>
+                  
                 
               </ul>
             </div>

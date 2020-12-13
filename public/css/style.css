@@ -1,0 +1,59 @@
+body{
+    font-family: 'Lato';
+}
+/* begin navbar */
+
+.user {
+position: absolute;
+right: 0;
+display: flex;
+}
+.user li{
+    margin: 0 .5em;
+}
+nav{
+    width: 85%;
+    margin: 0 auto;
+}
+.nav-link{
+    margin: 0 .4em;
+}
+.navbar-brand{
+    font-family: Syncopate;
+}
+.registerBTN{
+    background: #212529;
+    padding: 10px 20px!important;
+letter-spacing: 1.15px;
+    border: 1px solid #212529;
+    color: white!important;
+    border-radius: 5px;
+    font-weight: 500;
+    transition:  .2s ease-in-out;
+
+}
+.registerBTN:hover{
+  color: #212529!important;
+  background: white;
+  font-weight: 600;
+ 
+
+
+}
+.registerBTNClicked{
+    color: #212529!important;
+    background: white;
+    font-weight: 600;
+}
+.fa-user{
+    margin-right: 4px;
+}
+.inlogBTN{
+    font-weight: 500;
+}
+/* end navbar */
+/* user begin */
+.card{
+    margin-top: 10%;
+}
+/* user end */
