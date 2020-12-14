@@ -15,8 +15,9 @@ display: flex;
     margin: 0 .5em;
 }
 nav{
-    width: 85%;
-    margin: 0 auto;
+  width: 85%;
+  margin: 0 auto;
+    background: white;
 }
 .nav-link{
     margin: 0 .4em;
@@ -43,6 +44,9 @@ letter-spacing: 1.15px;
 
 
 }
+#navbar{
+    background-color: white;
+}
 
 .registerBTNClicked{
     color: #212529!important;
@@ -55,6 +59,7 @@ letter-spacing: 1.15px;
 .inlogBTN{
     font-weight: 500;
 }
+
 /* end navbar */
 /* user begin */
 .card{

@@ -21,7 +21,7 @@ Route::post('/contact', 'ContactController@handleForm')->name('contact.handle');
 Route::get('blog/{id}', function($id)
 {
     return 'blog '.$id;
-});
+})->name('blog_detail');
 
 
 // Route::group(['prefix' => 'studenten'], function(){

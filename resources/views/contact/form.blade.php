@@ -7,9 +7,9 @@
       
 <form action="{{ route('contact.handle') }}" method="post">
     @csrf
-<input type="text" name="naam" placeholder="Naam ..." value=" {{ old('naam') }}"><br>
-<input type="email" name="email" placeholder="Email ..." value=" {{ old('email') }}"><br>
-<input type="text" name="onderwerp" placeholder="Onderwerp ..." value=" {{ old('onderwerp') }}"><br>
+<input type="text" name="naam" placeholder="Naam ..." value="{{ old('naam') }}"><br>
+<input type="email" name="email" placeholder="Email ..." value="{{ old('email') }}"><br>
+<input type="text" name="onderwerp" placeholder="Onderwerp ..." value="{{ old('onderwerp') }}"><br>
 <textarea name="bericht" placeholder="Bericht ..." cols="30" rows="10" >{{ old('bericht') }}</textarea><br>
 @if ($errors->any())
     <div class="alert alert-danger">
