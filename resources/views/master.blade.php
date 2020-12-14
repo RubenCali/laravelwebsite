@@ -57,7 +57,7 @@
     </div>
           </nav>
     </section>
-@yield('content');
+@yield('content')
 
 
 

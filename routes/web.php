@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-})->name('homepage');
+Route::get('/', 'homepageController@homepage')->name('homepage');
 Route::get('/blog-posten', 'BlogPostenController@blogPosten')->name('blogPosten');
 Route::get('/contact', 'ContactController@contact')->name('contact');
 Route::post('/contact', 'ContactController@handleForm')->name('contact.handle');
