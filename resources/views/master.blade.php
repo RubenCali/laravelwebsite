@@ -16,7 +16,6 @@
     </style>
 </head>
 <body>
-    <section>
         <div class="container-fluid">
             <div class="row">
 
@@ -56,7 +55,6 @@
         </div>
     </div>
           </nav>
-    </section>
 @yield('content')
 
 

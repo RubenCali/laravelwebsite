@@ -1,6 +1,9 @@
 body{
     font-family: 'Lato';
 }
+section{
+    margin-top: 6%;
+}
 /* begin navbar */
 
 .user {
