@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG WEBSITE</title>
+    <title>BLOG {{ Route::currentRouteName() == "blogPosten" ? '| POST BLOG' : '' }}{{ Route::currentRouteName() == "login" ? '| LOGIN' : '' }}{{ Route::currentRouteName() == "register" ? '| REGISTREER' : '' }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo asset('img/icon.ico') ?>">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo asset('css/style.css')?>">
     <style>
@@ -28,13 +29,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link {{ Route::currentRouteName() == "homepage" ? 'active' : '' }}" href="<?php echo route('homepage') ?>">Home</a>
+                  <a class="nav-link {{ Route::currentRouteName() == "homepage" ? 'active' : '' }}" href="<?php echo route('homepage') ?>">Blog</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="http://rubencali.nl/" target="_blank">Portfolio</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link {{ Route::currentRouteName() == "blogPosten" ? 'active' : '' }}" href="<?php echo route('blogPosten') ?>">Blog posten</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {{ Route::currentRouteName() == "contact" ? 'active' : '' }}" href="<?php echo route('contact') ?>">Contact</a>
                 </li>
               
                 <div class="user">
