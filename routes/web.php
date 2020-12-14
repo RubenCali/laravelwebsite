@@ -16,12 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
-Route::get('/blog-detail', 'BlogDetailController@blogDetail')->name('blogDetail');
 Route::get('/blog-posten', 'BlogPostenController@blogPosten')->name('blogPosten');
 Route::get('/contact', 'ContactController@contact')->name('contact');
 Route::post('/contact', 'ContactController@handleForm')->name('contact.handle');
 
-
+Route::get('blog/{id}', function($id)
+{
+    return 'blog '.$id;
+});
 
 
 // Route::group(['prefix' => 'studenten'], function(){
