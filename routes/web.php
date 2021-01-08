@@ -24,6 +24,7 @@ Route::get('blog/{id}', function($id)
 })->name('blog_detail');
 
 
+
 // Route::group(['prefix' => 'studenten'], function(){
 //     Route::get('ruben', function(){
 //         return 'Ruben';
@@ -36,6 +37,10 @@ Route::get('blog/{id}', function($id)
 //     });
 
 // });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -1,22 +1,30 @@
 @extends('master')
 @section('content')
-@foreach ($blogs as $blog)
+
 <section>
     <div class="container">
         <div class="row-fluid">
-<a href="#">
-     <img src="<?php echo asset('uploads' ) ?>/{{$blog->image}}" alt="{{ $blog->titel }}">
-<h2>{{ $blog->titel }}</h2>
-<p>{{ $blog->autheur }}</p>
-<p>{{ $blog->shortDES }}</p>
-<p>{{ $blog->longDES }}</p>
-<p>{{ $blog->datum }}</p>
-<p>{{ $blog->plaats }}</p>
-</a>
-</div>
-</div>
+            <div class="blog">
+            @foreach ($blogs as $blog)
+            <div class="blog__post">
+                
+                    <a href="#">
+                        <img src="<?php echo asset('uploads' ) ?>/{{$blog->image}}" alt="{{ $blog->titel }}">
+                        <p>{{ $blog->plaats }}</p>
+
+                    <h2>{{ $blog->titel }}</h2>
+                    <p>{{ $blog->shortDES }}</p>
+                    <a href="#">Lees meer...</a>
+                    <p>{{ $blog->datum }}</p>
+                    </a>
+             </div> 
+            @endforeach
+
+            </div>
+        </div>
+    </div>
 </section>
 
 
-@endforeach
-@endsection()
+
+@endsection 

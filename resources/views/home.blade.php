@@ -15,9 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <form method="post" action="{{ route('logout') }}">
-                        <input type="submit" value="logout">
-                    </form>
+                  
                 </div>
             </div>
         </div>
