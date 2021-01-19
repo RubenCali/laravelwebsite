@@ -5,13 +5,15 @@
         <div class="row">
 
       
-<form action="{{ route('contact.handle') }}" method="post">
+<form action="{{ route('post.handle') }}" method="post">
     @csrf
     <label>naam:</label>
 <input type="text" name="naam" placeholder="typ hier je naam in">
 @error('naam')
 <p>{{$message}}</p>
 @enderror
+<label>Foto:</label>
+<input type="file" name="foto" placeholder="Upload hier je foto">
 <button type="submit">verstuur</button>
 
 </form>

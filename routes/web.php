@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'homepageController@homepage')->name('homepage');
 Route::get('/blog-posten', 'BlogPostenController@blogPosten')->name('blogPosten');
+Route::post('/blog-posten', 'BlogPostenController@postHandle')->name('post.handle');
 Route::get('/contact', 'ContactController@contact')->name('contact');
 Route::post('/contact', 'ContactController@handleForm')->name('contact.handle');
 
@@ -41,6 +42,3 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

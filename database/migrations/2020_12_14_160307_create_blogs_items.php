@@ -22,6 +22,9 @@ class CreateBlogsItems extends Migration
             $table->date('datum');
             $table->string('plaats');
             $table->string('image');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
+
         });
     }
 
