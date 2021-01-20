@@ -24,7 +24,7 @@ class BlogPostenController extends Controller
             ];
             $validator = Validator::make($request->all(),$rules);
 		if ($validator->fails()) {
-			return redirect('insert')
+			return redirect('/admin')
 			->withInput()
 			->withErrors($validator);
 		}
@@ -41,10 +41,10 @@ class BlogPostenController extends Controller
 				$blogs->image = $data['image'];
 
 				$blogs->save();
-				return redirect('insert')->with('status',"Insert successfully");
+				return redirect('/admin')->with('status',"Insert successfully");
 			}
 			catch(Exception $e){
-				return redirect('insert')->with('failed',"operation failed");
+				return redirect('/admin')->with('failed',"operation failed");
 			}
 		}
         

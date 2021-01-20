@@ -16,6 +16,18 @@
                     <p>{{ $blog->shortDES }}</p>
                     <a href="{{URL::to("blog/{$blog->id}")}}">Lees meer...</a>
                     <p>{{ $blog->datum }}</p>
+                    <div class="edit">
+                        <p>
+                            <a href="{{URL::to("update-post/{$blog->id}")}}">
+                            <i class="fas fa-paint-brush"></i>
+                        </a>
+                        </p>
+                        <p>
+                            <a href="{{URL::to("delete/{$blog->id}")}}">
+                            <i class="fas fa-trash"></i>
+                            </a>
+                        </p>
+                    </div>
                     </a>
              </div> 
             @endforeach

@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'homepageController@homepage')->name('homepage');
 Route::get('/blog-posten', 'BlogPostenController@blogPosten')->name('blogPosten');
+Route::get('/update-post/{id}', 'UpdatePostController@update')->name('updatePost');
+Route::post('/update', 'UpdatePostController@update_post')->name('update_post');
+Route::get('/delete/{id}', 'DeleteController@delete')->name('delete');
 Route::get('/overzicht', 'OverzichtController@overzicht')->name('overzicht');
 Route::get('/admin', 'AdminController@admin')->name('admin');
 Route::post('/blog-posten', 'BlogPostenController@postHandle')->name('post.handle');
