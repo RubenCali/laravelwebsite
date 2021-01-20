@@ -15,14 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'homepageController@homepage')->name('homepage');
 Route::get('/blog-posten', 'BlogPostenController@blogPosten')->name('blogPosten');
+Route::get('/overzicht', 'OverzichtController@overzicht')->name('overzicht');
+Route::get('/admin', 'AdminController@admin')->name('admin');
 Route::post('/blog-posten', 'BlogPostenController@postHandle')->name('post.handle');
-Route::get('/contact', 'ContactController@contact')->name('contact');
+Route::get('/blog/{id}', 'DetailpageController@viewBlog')->name('viewblog');
+;Route::get('/contact', 'ContactController@contact')->name('contact');
 Route::post('/contact', 'ContactController@handleForm')->name('contact.handle');
 
-Route::get('blog/{id}', function($id)
-{
-    return 'blog '.$id;
-})->name('blog_detail');
+
 
 
 

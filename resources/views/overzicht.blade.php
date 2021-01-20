@@ -21,10 +21,7 @@
             @endforeach
 
             </div>
-            {{ $blogs->links() }}
-            <div class="overzicht">
-                <p><a href="{{ route('overzicht') }}">Overzicht van alle posts</a></p>
-            </div>
+          
 
         </div>
     </div>
